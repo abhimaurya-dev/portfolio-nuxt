@@ -2,6 +2,6 @@
 
 <template>
   <div>
-    <about />
+    <Hero />
   </div>
 </template>

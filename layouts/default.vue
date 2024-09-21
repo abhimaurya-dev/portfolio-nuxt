@@ -26,7 +26,7 @@ onBeforeUnmount(() => {
   <div>
     <div v-if="isMobile" class="relative">
       <main
-        class="flex items-center pt-3 px-8"
+        class="flex items-center pt-3 px-4"
         :class="{ 'justify-between': !showMenu, 'justify-end': showMenu }"
       >
         <div v-if="!showMenu" class="text-[1.3rem] text-gray-900 font-bold">
@@ -43,7 +43,7 @@ onBeforeUnmount(() => {
           v-if="showMenu"
           class="fixed top-0 right-0 h-full w-4/5 bg-white shadow-lg z-50 transition-transform transform translate-x-0"
         >
-          <div class="flex justify-between pl-4 pr-8 pt-3">
+          <div class="flex justify-between pl-4 pr-6 pt-3">
             <div class="text-[1.3rem] text-gray-900 font-bold">
               {{ "@ abhimaurya-dev" }}
             </div>
@@ -78,7 +78,7 @@ onBeforeUnmount(() => {
     </div>
 
     <div v-else>
-      <main class="flex justify-between pt-2 md:px-12 lg:px-20">
+      <main class="flex justify-between pt-5 md:px-12 lg:px-20">
         <div class="text-[1.3rem] text-gray-900 font-bold">
           {{ "@ abhimaurya-dev" }}
         </div>
