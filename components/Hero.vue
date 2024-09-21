@@ -19,9 +19,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div>
+  <div class="py-16">
     <div v-if="isMobile" class="px-4">
-      <div class="py-16 flex flex-col items-center">
+      <div class="pb-16 flex flex-col items-center">
         <div class="relative inline-block">
           <div
             class="absolute top-4 left-4 w-full h-full bg-gray-200 rounded-lg"
@@ -30,7 +30,7 @@ onBeforeUnmount(() => {
             class="relative border-4 border-white rounded-lg shadow-lg overflow-hidden"
           >
             <img
-              src="/public/images/abhimaurya.jpeg"
+              src="/public/images/abhishek2.jpg"
               alt="Profile"
               class="w-72 h-auto object-cover rounded-lg"
             />
@@ -79,7 +79,7 @@ onBeforeUnmount(() => {
               class="relative border-4 border-white rounded-lg shadow-lg overflow-hidden"
             >
               <img
-                src="/public/images/abhimaurya.jpeg"
+                src="/public/images/abhishek2.jpg"
                 alt="Profile"
                 class="w-72 h-auto object-cover rounded-lg"
               />

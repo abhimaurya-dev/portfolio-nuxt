@@ -3,5 +3,7 @@
 <template>
   <div>
     <Hero />
+    <About />
+    <Skills />
   </div>
 </template>
