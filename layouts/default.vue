@@ -1,0 +1,115 @@
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
+const isMobile = ref(false);
+const showMenu = ref(false);
+
+const checkMobile = () => {
+  isMobile.value = window.innerWidth < 768;
+};
+
+const handleShowMenu = () => {
+  showMenu.value = !showMenu.value;
+};
+
+onMounted(() => {
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", checkMobile);
+});
+</script>
+
+<template>
+  <div>
+    <div v-if="isMobile" class="relative">
+      <main
+        class="flex items-center pt-3 px-8"
+        :class="{ 'justify-between': !showMenu, 'justify-end': showMenu }"
+      >
+        <div v-if="!showMenu" class="text-[1.3rem] text-gray-900 font-bold">
+          {{ "@ abhimaurya-dev" }}
+        </div>
+        <div @click="handleShowMenu" class="cursor-pointer">
+          <span class="material-symbols-outlined text-[1.8rem] text-gray-600">
+            menu
+          </span>
+        </div>
+      </main>
+      <transition name="slide">
+        <div
+          v-if="showMenu"
+          class="fixed top-0 right-0 h-full w-4/5 bg-white shadow-lg z-50 transition-transform transform translate-x-0"
+        >
+          <div class="flex justify-between pl-4 pr-8 pt-3">
+            <div class="text-[1.3rem] text-gray-900 font-bold">
+              {{ "@ abhimaurya-dev" }}
+            </div>
+            <div @click="handleShowMenu" class="cursor-pointer">
+              <span
+                v-if="showMenu"
+                class="material-symbols-outlined text-[1.8rem] text-gray-600"
+              >
+                close
+              </span>
+            </div>
+          </div>
+          <hr class="mt-2 opacity-50" />
+          <ul
+            class="text-[1.3rem] text-gray-600 list-none py-4 px-6 flex flex-col gap-5"
+          >
+            <li class="cursor-pointer hover:text-gray-900">About</li>
+            <li class="cursor-pointer hover:text-gray-900">Skills</li>
+            <li class="cursor-pointer hover:text-gray-900">Projects</li>
+            <li class="cursor-pointer hover:text-gray-900">Contact</li>
+          </ul>
+          <hr class="opacity-50" />
+          <div class="px-6 py-4">
+            <button
+              class="bg-gray-900 w-full text-gray-50 border-none text-[1.1rem] px-6 py-2 rounded-xl"
+            >
+              Download CV
+            </button>
+          </div>
+        </div>
+      </transition>
+    </div>
+
+    <div v-else>
+      <main class="flex justify-between pt-2 md:px-12 lg:px-20">
+        <div class="text-[1.3rem] text-gray-900 font-bold">
+          {{ "@ abhimaurya-dev" }}
+        </div>
+        <ul
+          class="text-[1.1rem] text-gray-600 list-none flex items-center justify-center gap-3 md:gap-5 lg:gap-8"
+        >
+          <li>About</li>
+          <li>Skills</li>
+          <li>Projects</li>
+          <li>Contact</li>
+          <button
+            class="bg-gray-900 text-gray-50 border-none text-[1.1rem] px-6 py-2 rounded-xl"
+          >
+            Resume
+          </button>
+        </ul>
+      </main>
+    </div>
+
+    <NuxtPage />
+  </div>
+</template>
+
+<style scoped>
+.slide-enter-active,
+.slide-leave-active {
+  transform: translateX(100%);
+  transition: transform 0.1s ease-in;
+}
+.slide-enter,
+.slide-leave-to {
+  transition: transform 0.1s ease-in;
+}
+</style>
