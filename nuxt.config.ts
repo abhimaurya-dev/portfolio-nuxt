@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     port: 3000, // You can change this if needed
   },
   modules: ["@nuxtjs/tailwindcss"],
-  css: ["@/assets/css/tailwind.css"],
+  css: ["@/assets/css/tailwind.css", "@/node_modules/devicon/devicon.min.css"],
   app: {
     head: {
       title: "Abhishek Maurya | Portfolio",

@@ -73,7 +73,7 @@ onBeforeUnmount(() => {
     </div>
     <div v-else class="py-16 md:px-12 lg:px-20 flex flex-col items-center">
       <p class="px-4 py-2 bg-gray-200 rounded-full mb-6">About me</p>
-      <div class="flex justify-between items-start md:gap-25 md:gap-40">
+      <div class="flex justify-between items-start md:gap-20 lg:gap-40">
         <div class="relative inline-block mt-12">
           <div
             class="absolute top-4 right-4 w-full h-full bg-gray-200 rounded-lg"
@@ -84,11 +84,11 @@ onBeforeUnmount(() => {
             <img
               src="/public/images/abhishek.jpg"
               alt="Profile"
-              class="w-[30rem] h-auto object-cover rounded-lg"
+              class="lg:max-w-[30rem] md:max-w-[20rem] h-auto object-cover rounded-lg"
             />
           </div>
         </div>
-        <div class="mt-12 lg:max-w-[35rem]">
+        <div class="mt-12 md:max-w-[30rem] lg:max-w-[40rem]">
           <p class="text-gray-900 text-[2.2rem] text-wrap">
             Curious about me? Here you have it:
           </p>
