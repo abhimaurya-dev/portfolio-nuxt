@@ -1,12 +1,27 @@
-<script setup></script>
+<script setup>
+const isMobile = ref(false);
+
+const checkMobile = () => {
+  isMobile.value = window.innerWidth < 768;
+};
+
+onMounted(() => {
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", checkMobile);
+});
+</script>
 
 <template>
   <div>
-    <Hero />
-    <About />
-    <Skills />
-    <Projects />
-    <Contact />
-    <FooterSection />
+    <Hero :isMobile="isMobile" />
+    <About :isMobile="isMobile" />
+    <Skills :isMobile="isMobile" />
+    <Projects :isMobile="isMobile" />
+    <Contact :isMobile="isMobile" />
+    <FooterSection :isMobile="isMobile" />
   </div>
 </template>

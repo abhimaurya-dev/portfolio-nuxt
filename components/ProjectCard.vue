@@ -28,24 +28,10 @@ const props = defineProps({
     type: Array,
     required: true,
   },
-});
-
-const isMobile = ref(false);
-
-const checkMobile = () => {
-  isMobile.value = window.innerWidth < 768;
-};
-
-const description =
-  "I am a full stack developer. I have been bulding application where i am integrating machine learning with full stack applications. I love building application and with that always find some new things to learn about. Although i have been creating web applications for over 3 years, I still love it as if it is something new.";
-
-onMounted(() => {
-  checkMobile();
-  window.addEventListener("resize", checkMobile);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("resize", checkMobile);
+  isMobile: {
+    type: Boolean,
+    required: true,
+  },
 });
 </script>
 

@@ -1,20 +1,9 @@
 <script setup>
-const isMobile = ref(false);
-
-const checkMobile = () => {
-  isMobile.value = window.innerWidth < 768;
-};
-
-const description =
-  "I am a full stack developer. I have been bulding application where i am integrating machine learning with full stack applications. I love building application and with that always find some new things to learn about. Although i have been creating web applications for over 3 years, I still love it as if it is something new.";
-
-onMounted(() => {
-  checkMobile();
-  window.addEventListener("resize", checkMobile);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("resize", checkMobile);
+const props = defineProps({
+  isMobile: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 const { data: projects, error } = await useFetch("/api/fetchProjects");
@@ -44,6 +33,7 @@ if (error.value) {
           :key="project.id"
         >
           <ProjectCard
+            :isMobile="isMobile"
             :projectKey="index"
             :projectId="project.id"
             :projectTitle="project.projectTitle"
