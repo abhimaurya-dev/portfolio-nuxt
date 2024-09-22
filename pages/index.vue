@@ -5,5 +5,8 @@
     <Hero />
     <About />
     <Skills />
+    <Projects />
+    <Contact />
+    <FooterSection />
   </div>
 </template>

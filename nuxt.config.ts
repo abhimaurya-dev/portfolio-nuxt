@@ -6,6 +6,12 @@ export default defineNuxtConfig({
     host: "0.0.0.0",
     port: 3000, // You can change this if needed
   },
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
+    },
+  },
   modules: ["@nuxtjs/tailwindcss"],
   css: ["@/assets/css/tailwind.css", "@/node_modules/devicon/devicon.min.css"],
   app: {

@@ -20,7 +20,11 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="px-8 py-16 flex flex-col items-center">
-    <p class="px-4 py-2 bg-gray-200 rounded-full mb-6">Skills</p>
+    <p
+      class="px-4 md:px-5 lg:px-6 py-2 text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] bg-gray-200 rounded-full mb-6"
+    >
+      Skills
+    </p>
     <p class="text-[1.3rem] md:text-[2rem] w-[22rem] lg:w-[40rem] text-center">
       The skills, tools and technologies I am really good at:
     </p>

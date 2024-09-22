@@ -20,7 +20,11 @@ onBeforeUnmount(() => {
 <template>
   <div class="bg-gray-50 px-8">
     <div v-if="isMobile" class="py-16 flex flex-col items-center">
-      <p class="px-4 py-2 bg-gray-200 rounded-full mb-6">About me</p>
+      <p
+        class="px-4 md:px-5 lg:px-6 py-2 text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] bg-gray-200 rounded-full mb-6"
+      >
+        About me
+      </p>
       <div class="relative inline-block">
         <div
           class="absolute top-4 left-4 w-full h-full bg-gray-200 rounded-lg"
@@ -72,7 +76,11 @@ onBeforeUnmount(() => {
       </div>
     </div>
     <div v-else class="py-16 md:px-12 lg:px-20 flex flex-col items-center">
-      <p class="px-4 py-2 bg-gray-200 rounded-full mb-6">About me</p>
+      <p
+        class="px-4 md:px-5 lg:px-6 py-2 text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] bg-gray-200 rounded-full mb-6"
+      >
+        About me
+      </p>
       <div class="flex justify-between items-start md:gap-20 lg:gap-40">
         <div class="relative inline-block mt-12">
           <div

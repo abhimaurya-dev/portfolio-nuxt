@@ -50,6 +50,29 @@ onBeforeUnmount(() => {
           </span>
           Open to work
         </p>
+        <div class="flex gap-3 md:gap-4 lg:gap-5 pt-3 md:pt-4 lg:pt-5">
+          <a
+            href="https://github.com/abhimaurya-dev"
+            target="_blank"
+            title="Github"
+          >
+            <img src="/public/images/github.png" alt="github" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/abhimaurya-dev"
+            target="_blank"
+            title="Linkedin"
+          >
+            <img src="/public/images/linkedin.png" alt="linkedin" />
+          </a>
+          <a
+            href="https://www.instagram.com/abhishek.maurya__/"
+            target="_blank"
+            title="Instagram"
+          >
+            <img src="/public/images/instagram.png" alt="instagram" />
+          </a>
+        </div>
       </div>
     </div>
     <div v-else class="w-full">
@@ -70,6 +93,29 @@ onBeforeUnmount(() => {
               </span>
               Open to work
             </p>
+            <div class="flex gap-3 md:gap-4 lg:gap-5 pt-3 md:pt-4 lg:pt-5">
+              <a
+                href="https://github.com/abhimaurya-dev"
+                target="_blank"
+                title="Github"
+              >
+                <img src="/public/images/github.png" alt="github" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abhimaurya-dev"
+                target="_blank"
+                title="Linkedin"
+              >
+                <img src="/public/images/linkedin.png" alt="linkedin" />
+              </a>
+              <a
+                href="https://www.instagram.com/abhishek.maurya__/"
+                target="_blank"
+                title="Instagram"
+              >
+                <img src="/public/images/instagram.png" alt="instagram" />
+              </a>
+            </div>
           </div>
           <div class="relative inline-block">
             <div
