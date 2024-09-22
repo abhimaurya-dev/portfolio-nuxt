@@ -60,18 +60,47 @@ onBeforeUnmount(() => {
           <ul
             class="text-[1.3rem] text-gray-600 list-none py-4 px-6 flex flex-col gap-5"
           >
-            <li class="cursor-pointer hover:text-gray-900">About</li>
-            <li class="cursor-pointer hover:text-gray-900">Skills</li>
-            <li class="cursor-pointer hover:text-gray-900">Projects</li>
-            <li class="cursor-pointer hover:text-gray-900">Contact</li>
+            <li class="cursor-pointer hover:text-gray-900">
+              <a
+                class="no-underline text-gray-600 hover:text-gray-900"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li class="cursor-pointer hover:text-gray-900">
+              <a
+                class="no-underline text-gray-600 hover:text-gray-900"
+                href="#skills"
+                >Skills</a
+              >
+            </li>
+            <li class="cursor-pointer hover:text-gray-900">
+              <a
+                class="no-underline text-gray-600 hover:text-gray-900"
+                href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li class="cursor-pointer hover:text-gray-900">
+              <a
+                class="no-underline text-gray-600 hover:text-gray-900"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
           </ul>
           <hr class="opacity-50" />
           <div class="px-6 py-4">
-            <button
-              class="bg-gray-900 w-full text-gray-50 border-none text-[1.1rem] px-6 py-2 rounded-xl"
+            <a
+              href="https://drive.google.com/uc?export=download&id=16nMgzEJxzy4ilqg4Azi4NpuV-siTuvcN"
+              download
             >
-              Download CV
-            </button>
+              <button
+                class="bg-gray-900 w-full cursor-pointer text-gray-50 border-none text-[1.1rem] px-6 py-2 rounded-xl"
+              >
+                Download CV
+              </button>
+            </a>
           </div>
         </div>
       </transition>
@@ -85,15 +114,44 @@ onBeforeUnmount(() => {
         <ul
           class="text-[1.1rem] text-gray-600 list-none flex items-center justify-center gap-3 md:gap-5 lg:gap-8"
         >
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
-          <button
-            class="bg-gray-900 text-gray-50 border-none text-[1.1rem] px-6 py-2 rounded-xl"
+          <li class="cursor-pointer hover:text-gray-900">
+            <a
+              class="no-underline text-gray-600 hover:text-gray-900"
+              href="#about"
+              >About</a
+            >
+          </li>
+          <li class="cursor-pointer hover:text-gray-900">
+            <a
+              class="no-underline text-gray-600 hover:text-gray-900"
+              href="#skills"
+              >Skills</a
+            >
+          </li>
+          <li class="cursor-pointer hover:text-gray-900">
+            <a
+              class="no-underline text-gray-600 hover:text-gray-900"
+              href="#projects"
+              >Projects</a
+            >
+          </li>
+          <li class="cursor-pointer hover:text-gray-900">
+            <a
+              class="no-underline text-gray-600 hover:text-gray-900"
+              href="#contact"
+              >Contact</a
+            >
+          </li>
+          <a
+            href="https://drive.google.com/uc?export=download&id=16nMgzEJxzy4ilqg4Azi4NpuV-siTuvcN"
+            download
           >
-            Resume
-          </button>
+            <button
+              class="bg-gray-900 cursor-pointer text-gray-50 border-none text-[1.1rem] px-6 py-2 rounded-xl"
+            >
+              Download CV
+            </button>
+          </a>
         </ul>
       </main>
     </div>

@@ -8,7 +8,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="px-4 py-16 lg:px-20 lg:py-24 flex flex-col items-center">
+  <div
+    id="contact"
+    class="px-4 py-16 lg:px-20 lg:py-24 flex flex-col items-center"
+  >
     <p
       class="px-4 md:px-5 lg:px-6 py-2 text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] bg-gray-200 rounded-full mb-6"
     >
