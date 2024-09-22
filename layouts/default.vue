@@ -23,7 +23,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div>
+  <div class="">
     <div v-if="isMobile" class="relative">
       <main
         class="flex items-center pt-3 px-4"
@@ -162,6 +162,8 @@ onBeforeUnmount(() => {
     </div>
 
     <NuxtPage />
+
+    <ScrollTop />
   </div>
 </template>
 
