@@ -109,40 +109,45 @@ onBeforeUnmount(() => {
     <div v-else>
       <main class="flex justify-between pt-5 md:px-12 lg:px-20">
         <div class="text-[1.3rem] text-gray-900 font-bold">
-          {{ "@ abhimaurya-dev" }}
+          <NuxtLink
+            class="no-underline text-gray-900 hover:text-gray-600"
+            to="/"
+          >
+            {{ "@ abhimaurya-dev" }}
+          </NuxtLink>
         </div>
         <ul
           class="text-[1.1rem] text-gray-600 list-none flex items-center justify-center gap-3 md:gap-5 lg:gap-8"
         >
           <li class="cursor-pointer hover:text-gray-900">
-            <a
+            <NuxtLink
               class="no-underline text-gray-600 hover:text-gray-900"
-              href="#about"
-              >About</a
+              to="#about"
+              >About</NuxtLink
             >
           </li>
           <li class="cursor-pointer hover:text-gray-900">
-            <a
+            <NuxtLink
               class="no-underline text-gray-600 hover:text-gray-900"
               href="#skills"
-              >Skills</a
+              >Skills</NuxtLink
             >
           </li>
           <li class="cursor-pointer hover:text-gray-900">
-            <a
+            <NuxtLink
               class="no-underline text-gray-600 hover:text-gray-900"
               href="#projects"
-              >Projects</a
+              >Projects</NuxtLink
             >
           </li>
           <li class="cursor-pointer hover:text-gray-900">
-            <a
+            <NuxtLink
               class="no-underline text-gray-600 hover:text-gray-900"
               href="#contact"
-              >Contact</a
+              >Contact</NuxtLink
             >
           </li>
-          <a
+          <NuxtLink
             href="https://drive.google.com/uc?export=download&id=16nMgzEJxzy4ilqg4Azi4NpuV-siTuvcN"
             download
           >
@@ -151,7 +156,7 @@ onBeforeUnmount(() => {
             >
               Download CV
             </button>
-          </a>
+          </NuxtLink>
         </ul>
       </main>
     </div>

@@ -13,6 +13,14 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("resize", checkMobile);
 });
+
+const router = useRouter();
+
+onMounted(() => {
+  if (window.location.hash) {
+    router.replace("/");
+  }
+});
 </script>
 
 <template>
