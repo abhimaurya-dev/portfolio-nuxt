@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     port: 3000, // You can change this if needed
   },
   runtimeConfig: {
+    MONGO_URI: process.env.MONGO_URI,
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseAnonKey: process.env.SUPABASE_ANON_KEY,

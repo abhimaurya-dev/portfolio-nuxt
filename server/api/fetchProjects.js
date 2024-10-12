@@ -1,21 +1,27 @@
-import { createClient } from "@supabase/supabase-js";
+import { MongoClient } from "mongodb";
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+const mongoUri = process.env.MONGO_URI; // MongoDB connection string
+const client = new MongoClient(mongoUri);
 
 export default defineEventHandler(async (event) => {
-  const { data, error } = await supabase.from("projects").select("*");
+  try {
+    await client.connect();
+    const database = client.db("portfolio");
+    const projectsCollection = database.collection("projects");
 
-  if (error) {
+    const data = await projectsCollection.find({}).toArray();
+
+    return {
+      statusCode: 200,
+      body: data,
+    };
+  } catch (error) {
     return {
       statusCode: 500,
-      body: { message: "Error fetching tasks", error },
+      body: { message: "Error Connecting Database", error },
     };
+  } finally {
+    await client.close();
   }
-  // console.log("new data", data);
-  return {
-    statusCode: 200,
-    body: data,
-  };
 });
+// mongodb+srv://abhishek:AXHd25Msgdd3hwvS@projects.o3xyc.mongodb.net/
